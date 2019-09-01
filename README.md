@@ -4,7 +4,7 @@ This app allows you to send instructions and parameters to a robotic hoover. The
 Clone this repo:
 
 ```bash
-git clone <url here>
+git clone git@github.com:bengscott2/hoover-tech-test.git
 ```
 
 Navigate into the root folder and install the dependencies with npm install:
@@ -79,5 +79,7 @@ Built with node.js this app doesn't require any dependencies, beyond the standar
 I struggled with what I thought was the 'correct' approach to the architecture of this app. In another project I did use a more modular and functional style of programming which you can see [here](https://github.com/bengscott2/train-times). I felt that I had a defensible reason to use the more OOP style for this standalone app and so I went with that. Having said that I would like to get feedback on that and be challenged on this idea.
 
 If I had more time I would have liked to explore pulling the dirt locations out of the hoover class and into a room class. You could make an argument that the hoover doesn't need to know about the dirt locations and that a room class should hold that. I could also imagine a situation where one room is instantiated with multiple hoovers working on the same room.
+
+I generally wouldn't push the node_modules or coverage folder up to GitHub but in the instructions given it said to include all code not part of the program run. In the interest of transparency I've included any file that was created during the making of this app. 
 
 If you have any questions or comments about this project I would love to hear any and all feedback! I'm curious to see how others would approach this problem and would enjoy listening to other developers thoughts regarding my own approach.
