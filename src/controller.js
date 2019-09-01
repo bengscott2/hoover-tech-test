@@ -1,4 +1,4 @@
-const Hoover = require('./hoover')
+const Hoover = require('./hoover');
 
 module.exports = class Controller {
   constructor(navParameters, hoover = Hoover) {

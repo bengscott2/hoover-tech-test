@@ -27,7 +27,7 @@ module.exports = class Hoover {
         break;
     }
     this.checkForDirt();
-    return moveResult
+    return moveResult;
   }
 
   increasePosition(axisIndex) {
@@ -45,7 +45,7 @@ module.exports = class Hoover {
 
     this.dirtLocation.forEach((location, index) => {
       if (location[0] === this.position[0] && location[1] === this.position[1]) {
-        this.removeDirt(index)
+        this.removeDirt(index);
         this.dirtCaught += 1;
       }
     });
@@ -53,7 +53,7 @@ module.exports = class Hoover {
   }
 
   removeDirt(dirtPosition) {
-    return this.dirtLocation.splice(dirtPosition, 1)
+    return this.dirtLocation.splice(dirtPosition, 1);
   }
 
   get positionAndDirtCaught() {
