@@ -63,7 +63,7 @@ npm test
 This will show the code coverage table as well.
 
 ### Tech Stack
-Built with node.js this app doesn't require any dependencies, beyond the standard node library, other than Jest which is used for testing.
+Built with node.js this app doesn't require any dependencies, beyond the standard node library, other than Jest which is used for testing and eslint for linting.
 
 ### Approach
 1. I started by modelling out  how I wanted the information to flow and what objects would be communicating with each other.
@@ -80,4 +80,4 @@ I struggled with what I thought was the 'correct' approach to the architecture o
 
 If I had more time I would have liked to explore pulling the dirt locations out of the hoover class and into a room class. You could make an argument that the hoover doesn't need to know about the dirt locations and that a room class should hold that. I could also imagine a situation where one room is instantiated with multiple hoovers working on the same room.
 
-If you have any questions or comments about this project I would love to hear any and all feedback! I'm curious to see how others would approach this problem and would enjoy listening to other developers thoughts regarding my own approach. 
+If you have any questions or comments about this project I would love to hear any and all feedback! I'm curious to see how others would approach this problem and would enjoy listening to other developers thoughts regarding my own approach.
