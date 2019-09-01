@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>9/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">60% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>3/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>9/10</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -53,19 +53,46 @@
 <a name='L5'></a><a href='#L5'>5</a>
 <a name='L6'></a><a href='#L6'>6</a>
 <a name='L7'></a><a href='#L7'>7</a>
-<a name='L8'></a><a href='#L8'>8</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">async function <span class="fstat-no" title="function not covered" >start </span>(input = <span class="branch-0 cbranch-no" title="branch not covered" >'input.txt',</span>inputParser = <span class="branch-0 cbranch-no" title="branch not covered" >parser,</span> controller = <span class="branch-0 cbranch-no" title="branch not covered" >Controller)</span> {
-  let navParameters = <span class="cstat-no" title="statement not covered" >await inputParser(input)</span>
-  let hooverController = <span class="cstat-no" title="statement not covered" >new controller(navParameters)</span>
-  let finalReturn = <span class="cstat-no" title="statement not covered" >hooverController.executeInstructions()</span>
-<span class="cstat-no" title="statement not covered" >  console.log(finalReturn)</span>
-<span class="cstat-no" title="statement not covered" >  return finalReturn</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const parser = require('./src/input-parser');
+const Controller = require('./src/controller')
+&nbsp;
+async function start (input = <span class="branch-0 cbranch-no" title="branch not covered" >'input.txt',</span>inputParser = parser, controller = Controller) {
+  let navParameters = await inputParser(input)
+  let hooverController = new controller(navParameters)
+  let finalReturn = hooverController.executeInstructions()
+  console.log(finalReturn)
+  return finalReturn
+}
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (require.main === module) {
+<span class="cstat-no" title="statement not covered" >  start()</span>
+} else {
+  module.exports = start
 }
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -73,7 +100,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Sep 01 2019 20:35:51 GMT+0100 (British Summer Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Sep 01 2019 20:38:58 GMT+0100 (British Summer Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
